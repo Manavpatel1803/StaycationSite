@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins',sans-serif;
+    background-color: #5d4954;
+}
+.logo
+{
+    color:rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    text-align:start;
+}
+.nav-links
+{
+    display: flex;
+    justify-content: space-around;
+    width:40%;
+
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color:rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.threelines
+{
+    display: none;
+    cursor: pointer;
+}
+.threelines div
+{
+   width:25px;
+   height: 3px;
+   background-color:rgb(226, 226, 226);
+   margin: 5px;
+
+}
+
+
+
+
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        overflow-x: hidden;
+    }
+   .nav-links
+   {
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       background-color: #5d4954;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+}
+.nav-links li{
+    opacity: 0;
+}
+.threelines{
+    display: block;
+}
+
+   }
+.nav-active
+{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade
+{
+    from
+    {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1
+{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2
+{
+    opacity: 0;
+}
+.toggle .line3
+{
+    transform: rotate(45deg) translate(-5px,-6px);
+} 
+.images-slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+  } 
+  /* The dots/bullets/indicators */
+  .imgdot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+/* style for benefits section*/
+
+.benefits-slideshow-container{
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.myQuotes {
+    display: none;
+    padding: 100px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;font-size:25px ;}
+
+h1
+{
+    text-align: center;
+}
+  .row1 {
+    display: flex;
+    height:auto;
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .row2 {
+    display: flex;
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    position: relative;
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins',sans-serif;
+    background-color: #5d4954;
+}
+
+/*
+*/
+
+body{
+    background-color: rgb(219, 165, 64);
+}

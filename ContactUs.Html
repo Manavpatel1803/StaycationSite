@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Poppins">
+    
+    <title>Document</title>
+    <style>
+      
+      .googlemap
+      {
+        width: 100%; 
+      }
+      input[type=text], [type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: mediumpurple;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: deeppink;
+}
+
+
+.contactform {
+  position: relative;    
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  z-index:2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:auto;
+  margin-top:3%;    
+  width: 50%;
+  animation-name: gradient;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;  
+    
+}
+    
+.contactform:hover { 
+ animation-name: gradient;
+ animation-duration: 15s;
+ animation-iteration-count: infinite;    
+    
+   
+}
+
+
+.column {
+  
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+    
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: auto;
+    margin-top:0;
+  }
+}
+
+
+@keyframes gradient {
+  0%   {background-color: #D78DDB;}
+  20%   {background-color: #7AF2C3;}
+  40%  {background-color: #759CEC;}
+  60%   {background-color: #23F2EB;}
+  80%  {background-color: #F27723;}       
+  100% {background-color: #AD3BD7;}
+}
+
+
+    </style>
+</head>
+<body>
+  <div id="google_translate_element"></div>
+  <script >
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <nav>
+        <div class="logo">
+            <h2>Staycation Korea</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="Places.html">Places</a></li>
+            <li><a href="Signup.html">Sign Up</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <div class="threelines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    </nav>
+    <div class="images-slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="images/image1.jpg" alt="img1" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="images/image2.jpg" alt="img2" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="images/image3.jpg" alt="img3" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="images/image5.jpg" alt="img4" style="width:100%">
+          </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="imgdot"></span> 
+          <span class="imgdot"></span> 
+          <span class="imgdot"></span> 
+          <span class="imgdot"></span> 
+        </div>
+        <br>
+        <br>
+        <div class="wrapper">
+        <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202407.59916719497!2d126.83400197839622!3d37.56404550342195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul%2C%20South%20Korea!5e0!3m2!1sen!2suk!4v1651612755672!5m2!1sen!2suk" width="600" height="450" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form name="myform" action="mailto:patelmanav570@gmail.com" method="POST" onsubmit="return validForm()"> 
+          <div class="contactform">
+            <div style="text-align:center">
+              <h1>Contact Us </h1>
+              <p>If you have any doubt or query do contact us </p>
+            </div>
+            <div class="row">
+              <div class="column">
+                  <label for="name" > Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name..">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email..">
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+         
+        
+
+          <footer>
+            <div class="logo">
+                <h1>Staycation Korea</h1>
+            </div>
+            <p>Company © Staycation Korea. All rights reserved.</p>
+          </footer>
+        
+    <script src="web.js"></script>
+   
